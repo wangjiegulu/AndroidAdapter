@@ -8,5 +8,5 @@ import android.support.v7.widget.RecyclerView;
  * Email: tiantian.china.2@gmail.com
  * Date: 1/19/15.
  */
-public abstract class ABRecyclerViewAdapter extends RecyclerView.Adapter<ABRecyclerViewHolder> {
+public abstract class ARecyclerViewAdapter extends RecyclerView.Adapter<ARecyclerViewHolder> {
 }

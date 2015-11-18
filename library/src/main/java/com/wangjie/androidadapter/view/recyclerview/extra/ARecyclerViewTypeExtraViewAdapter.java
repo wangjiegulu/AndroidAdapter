@@ -13,14 +13,14 @@ import com.wangjie.androidadapter.core.AdapterTypeRender;
  * Email: tiantian.china.2@gmail.com
  * Date: 1/22/15.
  */
-public abstract class ABRecyclerViewTypeExtraViewAdapter extends RecyclerView.Adapter<ABRecyclerViewTypeExtraHolder> {
+public abstract class ARecyclerViewTypeExtraViewAdapter extends RecyclerView.Adapter<ARecyclerViewTypeExtraHolder> {
     private static final int TYPE_HEADER_VIEW = 0x7683;
     private View headerView;
     private static final int TYPE_FOOTER_VIEW = 0x7684;
     private View footerView;
     private int extraCount;
 
-    protected ABRecyclerViewTypeExtraViewAdapter(View headerView, View footerView) {
+    protected ARecyclerViewTypeExtraViewAdapter(View headerView, View footerView) {
         this.headerView = headerView;
         this.footerView = footerView;
         extraCount += hasHeaderView() ? 1 : 0;
@@ -45,9 +45,9 @@ public abstract class ABRecyclerViewTypeExtraViewAdapter extends RecyclerView.Ad
 
     @TargetApi(Build.VERSION_CODES.DONUT)
     @Override
-    public ABRecyclerViewTypeExtraHolder onCreateViewHolder(ViewGroup viewGroup, int viewType) {
-        AdapterTypeRender<ABRecyclerViewTypeExtraHolder> render = getAdapterTypeRender(viewType);
-        ABRecyclerViewTypeExtraHolder holder = render.getReusableComponent();
+    public ARecyclerViewTypeExtraHolder onCreateViewHolder(ViewGroup viewGroup, int viewType) {
+        AdapterTypeRender<ARecyclerViewTypeExtraHolder> render = getAdapterTypeRender(viewType);
+        ARecyclerViewTypeExtraHolder holder = render.getReusableComponent();
         holder.itemView.setTag(R.id.aa__id_adapter_item_type_render, render);
         render.bindEvents();
         return holder;
@@ -55,8 +55,8 @@ public abstract class ABRecyclerViewTypeExtraViewAdapter extends RecyclerView.Ad
 
     @TargetApi(Build.VERSION_CODES.DONUT)
     @Override
-    public void onBindViewHolder(ABRecyclerViewTypeExtraHolder holder, int innerPosition) {
-        AdapterTypeRender<ABRecyclerViewTypeExtraHolder> render = (AdapterTypeRender<ABRecyclerViewTypeExtraHolder>) holder.itemView.getTag(R.id.aa__id_adapter_item_type_render);
+    public void onBindViewHolder(ARecyclerViewTypeExtraHolder holder, int innerPosition) {
+        AdapterTypeRender<ARecyclerViewTypeExtraHolder> render = (AdapterTypeRender<ARecyclerViewTypeExtraHolder>) holder.itemView.getTag(R.id.aa__id_adapter_item_type_render);
         /**
          * 计算该item在list中的index（不包括headerView和footerView）
          */
@@ -74,7 +74,7 @@ public abstract class ABRecyclerViewTypeExtraViewAdapter extends RecyclerView.Ad
      * @param type
      * @return
      */
-    public abstract AdapterTypeRender<ABRecyclerViewTypeExtraHolder> getAdapterTypeRenderExcludeExtraView(int type);
+    public abstract AdapterTypeRender<ARecyclerViewTypeExtraHolder> getAdapterTypeRenderExcludeExtraView(int type);
 
     /**
      * 获取item的数量（不包括headerView和footerView）
@@ -91,12 +91,12 @@ public abstract class ABRecyclerViewTypeExtraViewAdapter extends RecyclerView.Ad
      */
     public abstract int getItemViewTypeExcludeExtraView(int realItemPosition);
 
-    public AdapterTypeRender<ABRecyclerViewTypeExtraHolder> getAdapterTypeRender(int type) {
+    public AdapterTypeRender<ARecyclerViewTypeExtraHolder> getAdapterTypeRender(int type) {
         switch (type) {
             case TYPE_HEADER_VIEW:
-                return new ABRecyclerViewTypeExtraRender(headerView);
+                return new ARecyclerViewTypeExtraRender(headerView);
             case TYPE_FOOTER_VIEW:
-                return new ABRecyclerViewTypeExtraRender(footerView);
+                return new ARecyclerViewTypeExtraRender(footerView);
             default:
                 return getAdapterTypeRenderExcludeExtraView(type);
         }

@@ -1,15 +1,15 @@
 package com.wangjie.androidadapter.view.recyclerview.extra;
 
 import android.view.View;
-import com.wangjie.androidadapter.view.recyclerview.ABRecyclerViewHolder;
+import com.wangjie.androidadapter.view.recyclerview.ARecyclerViewHolder;
 
 /**
  * Author: wangjie
  * Email: tiantian.china.2@gmail.com
  * Date: 1/22/15.
  */
-public class ABRecyclerViewTypeExtraHolder extends ABRecyclerViewHolder {
-    public ABRecyclerViewTypeExtraHolder(View itemView) {
+public class ARecyclerViewTypeExtraHolder extends ARecyclerViewHolder {
+    public ARecyclerViewTypeExtraHolder(View itemView) {
         super(itemView);
     }
 

@@ -12,12 +12,12 @@ import com.wangjie.androidadapter.core.AdapterTypeRender;
  * Email: tiantian.china.2@gmail.com
  * Date: 1/19/15.
  */
-public abstract class ABRecyclerViewTypeAdapter extends RecyclerView.Adapter<ABRecyclerViewHolder> {
+public abstract class ARecyclerViewTypeAdapter extends RecyclerView.Adapter<ARecyclerViewHolder> {
     @TargetApi(Build.VERSION_CODES.DONUT)
     @Override
-    public ABRecyclerViewHolder onCreateViewHolder(ViewGroup viewGroup, int viewType) {
-        AdapterTypeRender<ABRecyclerViewHolder> render = getAdapterTypeRender(viewType);
-        ABRecyclerViewHolder holder = render.getReusableComponent();
+    public ARecyclerViewHolder onCreateViewHolder(ViewGroup viewGroup, int viewType) {
+        AdapterTypeRender<ARecyclerViewHolder> render = getAdapterTypeRender(viewType);
+        ARecyclerViewHolder holder = render.getReusableComponent();
         holder.itemView.setTag(R.id.aa__id_adapter_item_type_render, render);
         render.bindEvents();
         return holder;
@@ -25,8 +25,8 @@ public abstract class ABRecyclerViewTypeAdapter extends RecyclerView.Adapter<ABR
 
     @TargetApi(Build.VERSION_CODES.DONUT)
     @Override
-    public void onBindViewHolder(ABRecyclerViewHolder holder, int position) {
-        AdapterTypeRender<ABRecyclerViewHolder> render = (AdapterTypeRender<ABRecyclerViewHolder>) holder.itemView.getTag(R.id.aa__id_adapter_item_type_render);
+    public void onBindViewHolder(ARecyclerViewHolder holder, int position) {
+        AdapterTypeRender<ARecyclerViewHolder> render = (AdapterTypeRender<ARecyclerViewHolder>) holder.itemView.getTag(R.id.aa__id_adapter_item_type_render);
         render.bindData(position);
     }
 
@@ -35,5 +35,5 @@ public abstract class ABRecyclerViewTypeAdapter extends RecyclerView.Adapter<ABR
      *
      * @return
      */
-    public abstract AdapterTypeRender<ABRecyclerViewHolder> getAdapterTypeRender(int type);
+    public abstract AdapterTypeRender<ARecyclerViewHolder> getAdapterTypeRender(int type);
 }

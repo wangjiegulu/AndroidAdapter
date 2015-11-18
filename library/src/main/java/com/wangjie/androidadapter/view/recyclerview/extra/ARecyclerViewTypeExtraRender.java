@@ -9,15 +9,15 @@ import com.wangjie.androidadapter.core.AdapterTypeRender;
  * Email: tiantian.china.2@gmail.com
  * Date: 1/22/15.
  */
-/*public*/ class ABRecyclerViewTypeExtraRender implements AdapterTypeRender<ABRecyclerViewTypeExtraHolder> {
-    protected ABRecyclerViewTypeExtraHolder holder;
+/*public*/ class ARecyclerViewTypeExtraRender implements AdapterTypeRender<ARecyclerViewTypeExtraHolder> {
+    protected ARecyclerViewTypeExtraHolder holder;
 
-    protected ABRecyclerViewTypeExtraRender(View extraView) {
-        holder = new ABRecyclerViewTypeExtraHolder(extraView);
+    protected ARecyclerViewTypeExtraRender(View extraView) {
+        holder = new ARecyclerViewTypeExtraHolder(extraView);
     }
 
     @Override
-    public ABRecyclerViewTypeExtraHolder getReusableComponent() {
+    public ARecyclerViewTypeExtraHolder getReusableComponent() {
         return holder;
     }
 

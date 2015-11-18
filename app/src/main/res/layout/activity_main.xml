@@ -42,7 +42,7 @@
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:onClick="onClick"
-                android:text="listview adapter"
+                android:text="recyclerview"
                 />
 
             <Button
@@ -50,6 +50,7 @@
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:onClick="onClick"
+                android:tag="com.wangjie.androidadapter.sample.recyclerview.RecyclerViewTypeActivity"
                 android:text="recyclerview type"
                 />
 

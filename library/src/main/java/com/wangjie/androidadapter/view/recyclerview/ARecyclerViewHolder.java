@@ -10,11 +10,11 @@ import android.view.View;
  * Email: tiantian.china.2@gmail.com
  * Date: 1/19/15.
  */
-public class ABRecyclerViewHolder extends RecyclerView.ViewHolder {
-    private static final String TAG = ABRecyclerViewHolder.class.getSimpleName();
+public class ARecyclerViewHolder extends RecyclerView.ViewHolder {
+    private static final String TAG = ARecyclerViewHolder.class.getSimpleName();
     private SparseArray<View> holder = null;
 
-    public ABRecyclerViewHolder(View itemView) {
+    public ARecyclerViewHolder(View itemView) {
         super(itemView);
     }
 

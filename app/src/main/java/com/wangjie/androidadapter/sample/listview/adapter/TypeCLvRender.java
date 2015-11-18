@@ -12,11 +12,11 @@ import com.wangjie.androidadapter.sample.model.Person;
 /**
  * Created by wangjie on 11/18/15.
  */
-public class TypeCRender implements AdapterTypeRender<View> {
+public class TypeCLvRender implements AdapterTypeRender<View> {
     private LvtAdapter adapter;
     private View view;
 
-    public TypeCRender(Context context, LvtAdapter adapter) {
+    public TypeCLvRender(Context context, LvtAdapter adapter) {
         this.adapter = adapter;
         view = LayoutInflater.from(context).inflate(R.layout.type_c, null);
     }
